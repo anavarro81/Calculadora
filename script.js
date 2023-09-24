@@ -1,12 +1,8 @@
 
 const buttons$$ = document.querySelectorAll('button');
-let parcial_screen$$ = document.querySelector('.parcial-result');
 let result_screen$$ = document.querySelector('.result');
 numbrer_operators = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-divide
-menos
-mas
 
 
 const operar = (e) => {
@@ -22,7 +18,7 @@ const operar = (e) => {
 
     if (boton_pulsado.id == "reset") {
         console.log("He pulsado reset")
-        parcial_screen$$.innerText = "";
+        
         result_screen$$.innerText = "0";
     }
 
