@@ -8,42 +8,53 @@
 </head>
 <body>
 
-    <div>
-        <input id="input-screen" type="text" class="screen" >
-    </div>
-
-    <div class="calc-wrap">
-
-        <button id="reset" class="btn-calc"> C </button>
-        <button id="parenthesis" class="btn-calc"> () </button>
-        <button id="percent" class="btn-calc"> % </button>
-        <button id="divide" class="btn-calc"> / </button>
+    <div class="container"> 
         
-        <button id="7" class="btn-calc"> 7 </button>
-        <button id="multiply" class="btn-calc"> X </button>
+        <section class="calcultator">
         
-        <button id="8" class="btn-calc"> 8 </button>
-        <button id="9" class="btn-calc"> 9 </button>
+            <div class="screen">
+                
+            </div >    
+            
+            <table> 
+            
+                <tr>
+                    <td> <button id="7" class="btn-number"> 7 </button></td>
+                    <td> <button id="8" class="btn-number"> 8 </button></td>
+                    <td> <button id="9" class="btn-number"> 9 </button></td>
+                    <td> <button id="minus" class="btn-operator"> - </button></td>
+                </tr>
+                
+
+                <tr>
+                    <td> <button id="4" class="btn-number">  4 </button></td>
+                    <td> <button id="5" class="btn-number"> 5 </button></td>
+                    <td> <button id="6" class="btn-number"> 6 </button></td>
+                    <td> <button id="plus" class="btn-operator"> + </button></td>
+                </tr>
+
+                <tr>
+                    <td> <button id="1" class="btn-number"> 1 </button></td>
+                    <td> <button id="2" class="btn-number"> 2 </button></td>
+                    <td> <button id="3" class="btn-number"> 3 </button></td>
+                    <td> <button id="equal" class="btn-operator"> = </button></td>
+                </tr>
+
+                <tr>
+                    <td> <button id="punto" class="btn-operator"> . </button></td>
+                    <td> <button id="cero" class="btn-number"> 0 </button></td>
+                    <td> <button id="parenthesis" class="btn-operator"> () </button></td>
+                    <td> <button id="plusminus" class="btn-operator"> +/- </button></td>
+                </tr>
+
+            </table>
+        </div>
         
-
-        <button id="4" class="btn-calc"> 4 </button>
-        <button id="5" class="btn-calc"> 5 </button>
-        <button id="6" class="btn-calc"> 6 </button>
-        <button id="minus" class="btn-calc"> - </button>
+        </section>
         
-        <button id="1" class="btn-calc"> 1 </button>
-        <button id="2" class="btn-calc"> 2 </button>
-        <button id="3" class="btn-calc"> 3 </button>
-        <button id="plus" class="btn-calc"> + </button>
+    </div> 
 
-        <button id="sign" class="btn-calc"> +/- </button>
-        <button id="0" class="btn-calc"> 0 </button>
-        <button id="dot" class="btn-calc"> . </button>
-
-        <button id="equal" class="btn-calc"> = </button>
-
-    </div>
-
+    
     <script src="script.js"></script>
 
 </body>

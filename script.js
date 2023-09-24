@@ -1,70 +1,23 @@
-const filterInput = (e) => {
-    // console.log(e.target.value);
+const button$$ = document.querySelectorAll('.btn-operator')
+const buttonNumber$$ = document.querySelectorAll('button')
 
-    if (/^\d*\.?\d*$/.test(e.target.value)) {
-        // console.log('valor valido')
-        console.log(e.target.value[e.target.value.length - 1])
-        previos_input = e.target.value
-        console.log("valor previo: " + previos_input)
-    } else {
-        console.log('valor NO VALIDO')
-        console.log("valor previo: " + previos_input)
-        console.log(e.target.value[e.target.value.length - 1])
-        if (previos_input == "") {
-            e.target.value = ""
-        } else {
-            e.target.value = previos_input
-        }
-    }
-}
+console.log(button$$)
 
-const btnCalc$$ = document.querySelectorAll(".btn-calc")
-
-// Pantalla 
-const screen$$ = document.querySelector("#input-screen")
-screen$$.addEventListener('input', filterInput)
-
-
-const getButtonValue = (e) => {
-
+const operar = (e) => {
     console.log(e)
-
 }
 
-// Botones numericos. 
-const buttonNum$$ = document.querySelectorAll(".btn-calc")
+const operarNumber = (e) => {
+    console.log(e)
+}
 
-
-for (let button of buttonNum$$) {
-    button.addEventListener("click", getButtonValue)
+for (let button of button$$) {
+    button.addEventListener("click", operar)
     
 }
 
-
-
-let previos_input = ""
-
-const resestButton$$ = document.querySelector("#reset")
-
-// Elimina el contenido de la pantalla
-const reset = () => {
-    console.log('Estoy en el reset')
-    console.log(screen$$.value)
-    screen$$.value = ""
+for (let button of buttonNumber$$) {
+    button.addEventListener("click", operarNumber)
     
 }
-
-
-
-
-
-
-resestButton$$.addEventListener('click', reset)
-
-
-
-
-
-
-
 
