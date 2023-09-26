@@ -1,4 +1,8 @@
 $bg-color: #f5777b;
+$bg-color-botton: #58595b; 
+$button-txt-color: white;
+$button-btn-fs: 20px;
+$button-equal-bg: #f35b2a;
 
 * {
     margin: 0;
@@ -29,7 +33,7 @@ body {
     
       } 
 
-    .screen {
+        .screen {
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -42,18 +46,40 @@ body {
         width: 100%;
         background-color: #a1ae76;
       
-      }
+        }
       
+        table {
+            border-spacing: 10px;
+        }
 
 
-    button {
-        width:  50px;
-        height: 50px;    
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s ease;    
+        button {
+            width:  100px;
+            height: 50px;    
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;    
     
-    }
+        }
 
+        .botton-btn {
+            background-color: $bg-color-botton;
+            color: $button-txt-color;
+            font-size: $button-btn-fs;
+        }
+
+        .dbl-row {
+            width:  100%;
+        }
+
+        .dbl-col {
+            height: 100px;
+        }
+
+        .orange-bg {
+            background-color: $button-equal-bg;
+        }
+
+      
 }
 

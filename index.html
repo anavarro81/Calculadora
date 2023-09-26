@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/calculator.png">
+    <title> Calculadora </title>
 </head>
 <body>
 
@@ -13,47 +14,48 @@
         <section class="calcultator">
         
             <div class="screen">
-                <div class="parcial-result"> 123+ </div>                
+                123+
             </div>    
+
             
             <table> 
-
+<!-- Fila superior -->
+                <tr class="top-button-var">
+                    <td> <button id="reset" class="top-button"> MC </button></td>
+                    <td> <button id="sign" class="top-button"> M+ </button></td>
+                    <td> <button id="percent" class="top-button"> &#xF7; </button></td>
+                    <td> <button id="divide" class="top-button">  X </button></td>
+                </tr>
+    
+<!-- Resto botones -->
                 <tr>
-                    <td> <button id="reset" class="btn-special"> C </button></td>
-                    <td> <button id="reset-act-num" class="btn-special"> CE </button></td>
-                    <td> <button id="percent" class="btn-operator"> % </button></td>
-                    <td> <button id="divide" class="btn-operator">  &radic;  </button></td>
+                    <td> <button id="7" class="botton-btn"> 7 </button></td>
+                    <td> <button id="8" class="botton-btn"> 8 </button></td>
+                    <td> <button id="9" class="botton-btn"> 9 </button></td>
+                    <td> <button id="minus" class="botton-btn">  -  </button></td>
                 </tr>
             
             
                 <tr>
-                    <td> <button id="7" class="btn-number"> 7 </button></td>
-                    <td> <button id="8" class="btn-number"> 8 </button></td>
-                    <td> <button id="9" class="btn-number"> 9 </button></td>
-                    <td> <button id="menos" class="btn-operator"> - </button></td>
+                    <td> <button id="4" class="botton-btn"> 4 </button></td>
+                    <td> <button id="5" class="botton-btn"> 5 </button></td>
+                    <td> <button id="6" class="botton-btn"> 6 </button></td>
+                    <td> <button id="plus" class="botton-btn"> + </button></td>
                 </tr>
                 
-
                 <tr>
-                    <td> <button id="4" class="btn-number">  4 </button></td>
-                    <td> <button id="5" class="btn-number"> 5 </button></td>
-                    <td> <button id="6" class="btn-number"> 6 </button></td>
-                    <td> <button id="mas" class="btn-operator"> + </button></td>
+                    <td> <button id="1" class="botton-btn"> 1 </button></td>
+                    <td> <button id="2" class="botton-btn"> 2 </button></td>
+                    <td> <button id="3" class="botton-btn"> 3 </button></td>
+                    <td rowspan="2"> <button id="3" class="dbl-col orange-bg"> = </button></td>                                        
                 </tr>
 
-                <tr>
-                    <td> <button id="1" class="btn-number"> 1 </button></td>
-                    <td> <button id="2" class="btn-number"> 2 </button></td>
-                    <td> <button id="3" class="btn-number"> 3 </button></td>
-                    <td> <button id="equal" class="btn-operator"> = </button></td>
-                </tr>
 
                 <tr>
-                    <td> <button id="punto" class="btn-operator"> . </button></td>
-                    <td> <button id="cero" class="btn-number"> 0 </button></td>
-                    <td> <button id="parenthesis" class="btn-operator"> () </button></td>
-                    <td> <button id="plusminus" class="btn-operator"> +/- </button></td>
+                    <td colspan="2"> <button id="0" class="botton-btn dbl-row"> 0 </button></td>
+                    <td> <button id="dot" class="botton-btn"> . </button></td>                    
                 </tr>
+
 
             </table>
         </div>
