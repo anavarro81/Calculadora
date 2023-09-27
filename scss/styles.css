@@ -36,6 +36,9 @@ body {
   width: 100%;
   background-color: #a1ae76;
 }
+.container .screen .resltado-parcial {
+  font-size: 16px;
+}
 .container table {
   border-spacing: 10px;
 }

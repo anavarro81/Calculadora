@@ -34,17 +34,21 @@ body {
       } 
 
         .screen {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: end; 
-        border: 1px solid black;
-        border-radius: 5px;
-        padding: 10px 0px;
-        margin: 10px;
-        font-size: 30px;
-        width: 100%;
-        background-color: #a1ae76;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end; 
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px 0px;
+            margin: 10px;
+            font-size: 30px;
+            width: 100%;
+            background-color: #a1ae76;
+
+            .resltado-parcial {
+                font-size: 16px;
+            }    
       
         }
       
