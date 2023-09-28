@@ -21,7 +21,12 @@ body {
   align-items: center;
   background-color: #39393d;
   padding: 20px;
-  gap: 20px;
+  gap: 30px;
+}
+@media screen and (max-width: 450px) {
+  .container .calcultator {
+    padding: 10px;
+  }
 }
 .container .screen {
   display: flex;
@@ -36,12 +41,37 @@ body {
   width: 100%;
   background-color: #a1ae76;
 }
+.container .screen .resltado-parcial {
+  font-size: 16px;
+}
+.container table {
+  border-spacing: 10px;
+}
 .container button {
-  width: 50px;
+  width: 100px;
   height: 50px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+@media screen and (max-width: 450px) {
+  .container button {
+    width: 50px;
+  }
+}
+.container .botton-btn {
+  background-color: #58595b;
+  color: white;
+  font-size: 20px;
+}
+.container .dbl-row {
+  width: 100%;
+}
+.container .dbl-col {
+  height: 110px;
+}
+.container .orange-bg {
+  background-color: #f35b2a;
 }
 
 /*# sourceMappingURL=styles.css.map */
