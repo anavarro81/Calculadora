@@ -4,7 +4,7 @@ const buttons$$ = document.querySelectorAll('button');
 
 numbrer_operators = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 operatos = ["divide", "multiplica", "restar", "sumar"]
-operatos_signs = ["/", "X", "-", "+"]
+operatos_signs = ["/", "*", "-", "+"]
 
 const operar = (e) => {
     
@@ -34,6 +34,7 @@ const operar = (e) => {
         // Devuelve True si lo contiene. 
         var contieneOperador = operatos_signs.some(caracter => parcial$$.innerText.includes(caracter));
 
+        // Si la ultima tecla pulsasa es un operaor, se limpia resultado para agregar el nuevo numero.
         if (contieneOperador) {
             resultado$$.innerText = ""
         }
@@ -60,13 +61,24 @@ const operar = (e) => {
            
             resultado = eval(parcial$$.innerText + resultado$$.innerHTML)         
             parcial$$.innerHTML = resultado + boton_pulsado.innerHTML
+            resultado$$.innerHTML = resultado;
 
         } else {
             parcial$$.innerHTML  = parcial$$.innerHTML = resultado$$.innerHTML + boton_pulsado.innerHTML
+            
         } 
         }
 
         console.log("El resultado es: ", resultado)
+// Tecla igual
+    if (boton_pulsado.id == "igual") {  
+        
+        parcial$$.innerHTML = parcial$$.innerHTML + resultado$$.innerHTML
+        resultado = eval(parcial$$.innerHTML)
+        resultado$$.innerHTML = resultado
+
+
+    }
 
         
 }
