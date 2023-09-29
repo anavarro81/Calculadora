@@ -3,8 +3,11 @@ const buttons$$ = document.querySelectorAll('button');
 
 
 numbrer_operators = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-operatos = ["divide", "multiplica", "restar", "sumar"]
-operatos_signs = ["/", "*", "-", "+"]
+operadores = ["divide", "multiplica", "restar", "sumar"]
+operadores_signs = ["/", "*", "-", "+"]
+
+let tecla_act = ""
+let tecla_ant = ""
 
 const operar = (e) => {
     
@@ -16,10 +19,16 @@ const operar = (e) => {
     boton_pulsado = e.target
     valor = e.target.innerText
      
+    if (tecla_act == "") {
+        tecla_act = boton_pulsado.id
+    } else {
+        tecla_ant = tecla_act
+        tecla_act = boton_pulsado.id
+    }
 
-    console.log(boton_pulsado.id)
-    console.log('valor = ', valor)
-    console.log('parcial$$.innerText = ', parcial$$.innerText )
+
+
+
 
 // Botones numericos, los agrega a pantalla.
     if (numbrer_operators.includes(boton_pulsado.id))
@@ -32,14 +41,21 @@ const operar = (e) => {
         
         // Comprueba si el resultado parcial, contiene algun operador: +, -, x, /. 
         // Devuelve True si lo contiene. 
-        var contieneOperador = operatos_signs.some(caracter => parcial$$.innerText.includes(caracter));
+        var contieneOperador = operadores_signs.some(caracter => parcial$$.innerText.includes(caracter));
 
-        // Si la ultima tecla pulsasa es un operaor, se limpia resultado para agregar el nuevo numero.
-        if (contieneOperador) {
+
+        if (tecla_ant == 'dot') {
+            resultado$$.innerText = resultado$$.innerText + boton_pulsado.id
+        } else if (operadores.includes(tecla_ant))  {
             resultado$$.innerText = ""
+            resultado$$.innerText = resultado$$.innerText + boton_pulsado.id
+        } else {
+            resultado$$.innerText = resultado$$.innerText + boton_pulsado.id
         }
+        
+        
 
-        resultado$$.innerText = resultado$$.innerText + boton_pulsado.id
+        
     }
 // RESET
     if (boton_pulsado.id == "reset") {       
@@ -52,10 +68,10 @@ const operar = (e) => {
         resultado$$.innerText = parseInt(resultado$$.innerText) * -1
     }
 // Operadores: +, -, x, /.     
-    if (operatos.includes(boton_pulsado.id)) {
+    if (operadores.includes(boton_pulsado.id)) {
 
 
-        var contieneOperador = operatos_signs.some(caracter => parcial$$.innerText.includes(caracter));
+        var contieneOperador = operadores_signs.some(caracter => parcial$$.innerText.includes(caracter));
 
         if (contieneOperador) {
            
@@ -69,16 +85,18 @@ const operar = (e) => {
         } 
         }
 
-        console.log("El resultado es: ", resultado)
+        
 // Tecla igual
     if (boton_pulsado.id == "igual") {  
-        
         parcial$$.innerHTML = parcial$$.innerHTML + resultado$$.innerHTML
         resultado = eval(parcial$$.innerHTML)
-        resultado$$.innerHTML = resultado
-
-
+        resultado$$.innerHTML = resultado    
     }
+// Tecla punto.     
+if (boton_pulsado.id == "dot") {  
+    resultado$$.innerHTML = resultado$$.innerHTML + '.'
+    
+}
 
         
 }
